@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.customhorizontalcalender.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -102,6 +103,7 @@ class MainActivity : AppCompatActivity() {
                 selectedMonth = clickCalendar[Calendar.MONTH]
                 selectedYear = clickCalendar[Calendar.YEAR]
                 Log.d("xxx", "selectedDay: $selectedDay/${selectedMonth+1}/$selectedYear")
+                Snackbar.make(binding.rootLayout,"$selectedDay/${selectedMonth+1}/$selectedYear",Snackbar.LENGTH_SHORT).show()
 
             }
 
